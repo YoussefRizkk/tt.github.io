@@ -1,0 +1,644 @@
+@charset "UTF-8";
+
+/* Set the UTF-8 character encoding and add the Google font */
+@font-face {
+    font-family: 'Protest Riot';
+    src: local('Protest Riot'), url('https://fonts.gstatic.com/s/protestriot/v1/sC5E5LTmQeNRCuU5Gfg6nLcwz10TclonWxHa.ttf') format('truetype');
+}
+
+/* Global style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/****************************Header****************************/
+/* Header styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #f0d290;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+#header .logo {
+    width: 100px;
+    margin-right: 50px;
+}
+
+/*navigation bar style (Left)*/
+#navbar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+    display: inline;
+    margin-right: 20px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    transition: 0.3s ease;
+    font-family: 'Protest Riot';
+}
+
+#navbar li a:hover,
+#navbar li a.active,
+.icon i:hover,
+.footer .icon i:hover,
+.footer a:hover {
+    color: #a5632a;
+}
+
+#navbar a:link,
+#navbar a:visited,
+#navbar a:hover,
+#navbar a:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #a5632a;
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+}
+
+/*navigation bar style (Right)- Icon Styles*/
+.icon {
+    display: flex;
+}
+
+.icon i {
+    color: #323030;
+    padding-right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Banner styles */
+#hero1,
+#hero2 {
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero1 {
+    background-image: url("../images/BannerHero.png");
+}
+
+#hero2 {
+    background-image: url("../images/BannerNewProd.png");
+    display: none;
+}
+
+/* Styles for the heading in the hero section */
+#hero1 h1,
+#hero1 h2,
+#hero1 h3 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+
+}
+
+#hero1 h1 {
+    font-size: 25px;
+    font-family: 'Protest Riot';
+    top: 30%;
+    letter-spacing: 4px;
+    font-style: italic;
+    background-image: linear-gradient(to right, #dfa323, #e8b36f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#hero1 h2 {
+    font-size: 30px;
+    color: #d49308;
+    text-transform: uppercase;
+    top: 45%;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgb(189, 174, 79);
+}
+
+#hero1 h3 {
+    font-size: 20px;
+    color: #dfa323;
+    top: 53%;
+
+}
+
+/* Styles for the button in the hero section */
+#hero1 .buttonShop,
+#hero2 .buttonShop {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 14px 80px 14px 65px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+}
+
+#hero1 .buttonShop {
+    color: #a5632a;
+    border: 2px solid #a5632a;
+    top: 65%;
+    left: 50%;
+}
+
+#hero2 .buttonShop {
+    color: #baa3cb;
+    border: 2px solid #c9a3cb;
+    top: 60%;
+    left: 50%;
+    font-family: 'Protest Riot';
+}
+
+#hero1 .buttonShop:hover,
+#hero2 .buttonShop:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button prev & next styles */
+#hero1 .prev,
+#hero1 .next,
+#hero2 .prev,
+#hero2 .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    color: #a5632a;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+#hero1 .prev,
+#hero2 .prev {
+    left: 0;
+}
+
+#hero1 .next,
+#hero2 .next {
+    right: 0;
+}
+
+#hero1 .prev button:hover,
+#hero2 .prev button:hover,
+#hero1 .next button:hover,
+#hero2 .next button:hover {
+    background-color: rgba(153, 24, 24, 0.7);
+}
+
+/****************************Content****************************/
+
+/**** Section 1 - Top Sellers ****/
+#section1,
+#section2,
+#section3 {
+
+    align-items: center;
+    padding: 10px 40px;
+
+}
+
+#section1 .pro-container,
+#section2 .fArrivals,
+#section3 .international-pro {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pro {
+    width: 19%;
+    padding: 15px;
+    border: 1px solid #e7e2cc;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    transform: translateY(-10px);
+}
+
+h1 {
+    padding: 50px 0;
+    color: #000000;
+    font-size: 50px;
+    font-family: 'Protest Riot';
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* images styles */
+.pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#section1 .pro .des {
+    text-align: start;
+    padding: 5px;
+}
+
+#section1 .pro .des h3,
+#section3 .pro .des h3 {
+    margin-top: 10px;
+    color: #000000;
+    font-size: 16px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+#section1 .pro .sName {
+    margin-bottom: 20px;
+}
+
+#section1 .pro .des h2,
+#section3 .pro .des h2 {
+    margin: 8px 0;
+    color: #d49308;
+    font-size: 18px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+#section1 .pro .des span,
+#section3 .pro .des span {
+    color: #76777a;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/**** Section 2 - Fresh Arrivals****/
+
+/* images styles */
+#section2 .fArrivals img {
+    width: 48%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#section2 .fArrivals img.hover-img {
+    display: none;
+}
+
+/* titles styles */
+#section2 .fArrivals .des h2 {
+    font-size: 28px;
+    margin: 15px 0;
+    border-bottom: 2px solid #45266d92;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: 'Protest Riot';
+}
+
+#section2 .fArrivals .des h3 {
+    font-size: 24px;
+    margin: 20px 0;
+    padding-top: 10px;
+    margin-top: 20px;
+    color: #d4089a;
+    font-weight: bold;
+}
+
+#section2 .fArrivals .des h4 {
+    font-size: 18px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+#section2 .fArrivals .des {
+    width: 48%;
+    padding: 30px;
+    background-image: linear-gradient(to right, rgba(189, 134, 213, 0.421), rgba(79, 68, 167, 0.445));
+    border-radius: 10px;
+    text-align: justify;
+}
+
+#section2 .fArrivals .des p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px 0;
+    padding-bottom: 5px;
+}
+
+#section2 .fArrivals .des .Box-Flavors {
+    border: 1.5px solid #45266d92;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0;
+
+}
+
+#section2 .fArrivals .des .Box-Flavors h5 {
+    font-weight: bold;
+    color: #290b3e;
+    margin-bottom: 10px;
+    display: block;
+    border-bottom: 0.5px solid #45266d92;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+#section2 .fArrivals .des .Box-Flavors .check-flavor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#section2 .fArrivals .des .Box-Flavors .check-flavor .options {
+    display: flex;
+    align-items: flex-start;
+    margin: 2px;
+    width: 150px;
+}
+
+#section2 .fArrivals .des .Box-Flavors .check-flavor .options input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#section2 .fArrivals .des .box-colors {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px 0;
+
+}
+
+#section2 .fArrivals .des .box-colors label[for="colors"],
+#section2 .fArrivals .des .box-colors label[for="quantity"] {
+    font-weight: bold;
+    color: #290b3e;
+    margin: 0 13px;
+}
+
+#section2 .fArrivals .des .box-colors label[for="quantity"] {
+    margin-left: 80px;
+}
+
+#section2 .fArrivals .des .box-colors select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: #4a4a4b;
+    border: 1px solid #ccc;
+    width: 230px;
+    appearance: none;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='%23290b3e' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+#section2 .fArrivals .des .box-colors input[type="number"] {
+    padding: 0 3px 0 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    width: 70px;
+    height: 45px;
+    font-size: 17px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    color: #4a4a4b;
+    margin: 0px 10px;
+}
+
+#section2 .fArrivals .des .button {
+    height: 48px;
+    border-radius: 8px;
+    background-color: #290b3e;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+#section2 .fArrivals .des button.add-to-cart {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#section2 .fArrivals .des .button:hover {
+    background-color: #5e377a;
+}
+
+/**** Section 3 - International product ****/
+#section3 {
+    margin-bottom: 30px;
+}
+
+#section3 .international-pro .carousel .pro {
+    flex: 0 0 auto;
+    width: 220px;
+    margin-right: 40px;
+    scroll-snap-align: start;
+}
+
+#section3 .international-pro .carousel {
+    display: flex;
+    overflow-x: scroll;
+}
+
+/* Scrollbar style */
+#section3 .international-pro .carousel::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+
+#section3 .international-pro .carousel::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#section3 .international-pro .carousel::-webkit-scrollbar-thumb {
+    background-color: #f9e286;
+    border-radius: 10px;
+}
+
+#section3 .international-pro .carousel::-webkit-scrollbar-thumb:hover {
+    background-color: #fceea9;
+}
+
+
+
+/****************************Footer****************************/
+
+footer {
+    background-color: #eaddc1;
+    color: #000000;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styles applied to columns in the footer */
+footer .col1,
+footer .col2,
+footer .col3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+footer .col2,
+footer .col3 {
+    padding-top: 19px;
+}
+
+footer .col2 {
+    width: 330px;
+}
+
+/* Styles applied to the logo */
+footer .logo {
+    width: 140px;
+    height: auto;
+}
+
+/* General styles for links and social networks */
+footer .follow {
+    margin-top: 50px;
+}
+
+footer .follow i {
+    padding-right: 13px;
+    cursor: pointer;
+    color: #d49308;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: #e8b36f;
+}
+
+/* General styles for texts */
+footer h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+footer p,
+footer a {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Styles for the form section */
+footer .form {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 20px 30px;
+    width: 400px;
+}
+
+footer .form form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .form input[type="text"],
+footer .form input[type="email"],
+footer .form textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+footer .form textarea {
+    height: 60px;
+}
+
+footer .form button[type="submit"] {
+    padding: 8px 20px;
+    margin-top: 10px;
+    background-color: #d49308;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+footer .form button[type="submit"]:hover {
+    background-color: #e8b36f;
+}
+
+/* Styles for the "copyright" section */
+footer .copyright {
+    width: 100%;
+}
+
+footer .copyright p {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}

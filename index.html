@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head Section-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+    <meta name="author" content="Daniela Escobar">
+    <meta name="description" content="Assigment 3">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&family=Tsukimi+Rounded:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<!--Body Section-->
+
+<body>
+    <!--Header Section-->
+    <header id="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
+            <!-- Navigation Menu (Left)-->
+            <nav>
+                <ul id="navbar">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Navigation Menu (Right)-->
+        <div class="icon">
+            <i class="fas fa-search"></i>
+            <i class="far fa-user"></i>
+            <i class="fas fa-shopping-basket"></i>
+        </div>
+    </header>
+
+    <!-- Main banner -->
+    <section id="hero1" class="active">
+        <h1>"Savor the sweetness, one bite at a time"</h1>
+        <h2>Super Sale</h2>
+        <h3>Save up to 70% off!</h3>
+        <!-- Buttons -->
+        <a href="#" class="buttonShop">Shop Now</a>
+        <button class="prev" onclick="prevSlide()" onmousedown="stopAutoChange()" onmouseup="resumeAutoChange()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="next" onclick="nextSlide()" onmousedown="stopAutoChange()" onmouseup="resumeAutoChange()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </section>
+
+    <!-- New Product banner -->
+    <section id="hero2">
+        <a href="#" class="buttonShop">Shop Now</a>
+        <button class="prev" onclick="prevSlide()" onmousedown="stopAutoChange()" onmouseup="resumeAutoChange()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="next" onclick="nextSlide()" onmousedown="stopAutoChange()" onmouseup="resumeAutoChange()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </section>
+
+    <!-- Section 1 - Top Sellers Products-->
+    <section id="section1">
+        <h1>Top Sellers</h1>
+        <div class="pro-container">
+            <!-- Product 1-->
+            <div class="pro">
+                <img src="images/cookie1.png" alt="Chocolate-Chip-Cookie">
+                <div class="des">
+                    <h3 class="sName">Chocolate chip cookie</h3>
+                    <h2>$8.99</h2>
+                    <span>1/2 dozen</span>
+                </div>
+            </div>
+            <!-- Product 2-->
+            <div class="pro">
+                <img src="images/cookie2.png" alt="Cornstarch-Alfajor">
+                <div class="des">
+                    <h3>cornstarch alfajor with dulce de leche</h3>
+                    <h2>$10.99</h2>
+                    <span>1/2 dozen</span>
+                </div>
+            </div>
+            <!-- Product 3-->
+            <div class="pro">
+                <img src="images/cookie3.png" alt="Brandy-Cookie">
+                <div class="des">
+                    <h3 class="sName">classic brandy cookie</h3>
+                    <h2>$7.50</h2>
+                    <span>1/2 dozen</span>
+                </div>
+            </div>
+            <!-- Product 4-->
+            <div class="pro">
+                <img src="images/cookie4.png" alt="Chocolate-Alfajor">
+                <div class="des">
+                    <h3>Chocolate alfajor with dulce de leche</h3>
+                    <h2>$11.99</h2>
+                    <span>1/2 dozen</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 - New Arrivals -->
+    <section id="section2">
+        <h1>Fresh Arrivals</h1>
+        <div class="fArrivals">
+            <!-- images -->
+            <img src="images/new-product.png" alt="Macaron-Cookie-Box">
+            <img class="hover-img" src="images/new-product2.png" alt="Macaron-Cookie">
+            <!-- Description -->
+            <div class="des">
+                <h2>Box of 9 macarons</h2>
+                <h3>$26.50</h3>
+                <h4>New macarons are in! They come in a variety of flavors and colors.</h4>
+                <p>Indulge in the inspiration behind our macaron cookies, where tradition meets innovation to create a
+                    unique experience. Each cookie is carefully crafted following ancestral recipes refined over time,
+                    ensuring an authentic and exquisite flavor with every bite. Immerse yourself in the smoothness of
+                    their texture and let yourself be seduced by the burst of flavors that bring each of these small
+                    culinary masterpieces to life.</p>
+                <!-- Flavors Container-->
+                <div class="Box-Flavors">
+                    <h5>Choose Flavors</h5>
+                    <div class="check-flavor">
+                        <div class="options">
+                            <input type="checkbox" id="vanilla" name="flavors" value="vanilla">
+                            <label for="vanilla">Vanilla</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="chocolate" name="flavors" value="chocolate">
+                            <label for="chocolate">Chocolate</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="white-chocolate" name="flavors" value="white-chocolate">
+                            <label for="white-chocolate">White Chocolate</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="mint-chocolate" name="flavors" value="mint-chocolate">
+                            <label for="mint-chocolate">Mint Chocolate</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="strawberry" name="flavors" value="strawberry">
+                            <label for="strawberry">Strawberry</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="blueberry" name="flavors" value="blueberry">
+                            <label for="blueberry">Blueberry</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="raspberry" name="raspberry" value="raspberry">
+                            <label for="raspberry">Raspberry</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="mango" name="flavors" value="mango">
+                            <label for="mango">Mango</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="creme-brulee" name="flavors" value="creme-brulee">
+                            <label for="creme-brulee">Creme Brulee</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="Cookies-Cream" name="flavors" value="Cookies-Cream">
+                            <label for="Cookies-Cream">Cookies & Cream</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="lemon-cake" name="flavors" value="lemon-cake">
+                            <label for="lemon-cake">Lemon Cake</label>
+                        </div>
+                        <div class="options">
+                            <input type="checkbox" id="Caramel" name="flavors" value="Caramel">
+                            <label for="Caramel">Caramel</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Colors &  Quantity Container-->
+                <div class="box-colors">
+                    <!-- Color Section -->
+                    <label for="colors">Colors</label>
+                    <select id="colors" name="colors">
+                        <option value="Choose">Choose one</option>
+                        <option value="multicolors">Multicolors</option>
+                        <option value="pink">Pink</option>
+                        <option value="purple">Purple</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="orange">Orange</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="brown">Brown</option>
+                    </select>
+                    <!-- Quantity Section -->
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <!-- Button Container-->
+                <div class="button">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3 - International Products -->
+    <section id="section3">
+        <h1>International Cookies</h1>
+        <div class="international-pro">
+            <div class="carousel">
+                <!-- Product 1-->
+                <div class="pro">
+                    <img src="images/interCookie1.png" alt="Kuky-Cookie">
+                    <div class="des">
+                        <span>McKay</span>
+                        <h3 class="sName">Kuky</h3>
+                        <h2>$2.57</h2>
+                    </div>
+                </div>
+                <!-- Product 2-->
+                <div class="pro">
+                    <img src="images/interCookie2.png" alt="Rigochoc-Cookie">
+                    <div class="des">
+                        <span>Arcor</span>
+                        <h3>Rigochoc</h3>
+                        <h2>$2.81</h2>
+                    </div>
+                </div>
+                <!-- Product 3-->
+                <div class="pro">
+                    <img src="images/interCookie3.png" alt="Criollitas-Cookie">
+                    <div class="des">
+                        <span>McKay</span>
+                        <h3 class="sName">Criollitas</h3>
+                        <h2>$3.25</h2>
+                    </div>
+                </div>
+                <!-- Product 4-->
+                <div class="pro">
+                    <img src="images/interCookie4.png" alt="Frac-Cookie">
+                    <div class="des">
+                        <span>Costa</span>
+                        <h3>Frac</h3>
+                        <h2>$2.04</h2>
+                    </div>
+                </div>
+                <!-- Product 5-->
+                <div class="pro">
+                    <img src="images/interCookie5.png" alt="Triton-Cookie">
+                    <div class="des">
+                        <span>McKay</span>
+                        <h3>Triton</h3>
+                        <h2>$2.10</h2>
+                    </div>
+                </div>
+                <!-- Product 6-->
+                <div class="pro">
+                    <img src="images/interCookie6.png" alt="Bon-o-Bon-Cookie">
+                    <div class="des">
+                        <span>Arcor</span>
+                        <h3>Bon o Bon</h3>
+                        <h2>$2.81</h2>
+                    </div>
+                </div>
+                <!-- Product 7-->
+                <div class="pro">
+                    <img src="images/interCookie7.png" alt="Morocha-Cookie">
+                    <div class="des">
+                        <span>McKay</span>
+                        <h3>Morocha</h3>
+                        <h2>$1.67</h2>
+                    </div>
+                </div>
+                <!-- Product 8-->
+                <div class="pro">
+                    <img src="images/interCookie8.png" alt="Donut-Cookie">
+                    <div class="des">
+                        <span>Costa</span>
+                        <h3>Donut</h3>
+                        <h2>$2.31</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer Section-->
+    <footer>
+        <!--Logo/Follow Column-->
+        <div class="col1">
+            <img class="logo" src="images/logo.png" alt="page-logo">
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <!--Contact Column-->
+        <div class="col2">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>120 Bloor St E, Toronto, ON M4W 1B7</p>
+            <p><strong>Phone: </strong>+1(423) 3845-543</p>
+            <p> <strong>Hours: </strong></p>
+            <p>Monday to Friday 9 AM - 6 PM</p>
+            <p>Weekends 10 AM - 4 PM</p>
+        </div>
+        <!--About Column-->
+        <div class="col3">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <!--My Account Column-->
+        <div class="col3">
+            <h4>My account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+        </div>
+        <!--Form Column-->
+        <div class="form">
+            <h4>Contact Form</h4>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    required>
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <!--Copyright-->
+        <div class="copyright">
+            <p>©2024, Cookie Monster. All right reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/b5343ede9a.js" crossorigin="anonymous"></script>
+    <!--Java script-->
+    <script src="js/jscript.js"></script>
+</body>
+
+</html>
